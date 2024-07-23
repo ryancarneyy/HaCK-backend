@@ -3,26 +3,21 @@ import io from 'socket.io-client';
 const socket = io('http://localhost:8000');
 
 
-  const [temp, setTemp] = useState(null);
-  const [ultrasonic, setUltrasonic] = useState(null);
+  const [data, setData] = useState(null); 
 
   useEffect(() => {
     // Listen for temperature updates
-    socket.on('temp', (data) => {
+    socket.on('example_topic', (data) => {
       setTemp(data);
     });
 
-    // Listen for ultrasonic updates
-    socket.on('ultrasonic', (data) => {
-      setUltrasonic(data);
-    });
+    
 
     return () => {
-      socket.off('temp');
-      socket.off('ultrasonic');
+      socket.off('example_topic');
     };
   }, []);
 
   const exampleSend = (message) => {
-    socket.emit('topic', message);
+    socket.emit('example_topic', message);
   };

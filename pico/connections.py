@@ -1,5 +1,6 @@
 from simple import MQTTClient
 import ssl
+from time import sleep
 
 
 class sslWrap:
@@ -25,10 +26,13 @@ def connect_mqtt(mqtt_server, mqtt_user, mqtt_pass):
 import network
 
 
-def connect_internet(ssid, password):
+def connect_internet(ssid, password=None):
     wlan = network.WLAN(network.STA_IF)
     wlan.active(True)
-    wlan.connect(ssid, password)
+    if not password:
+        wlan.connect(ssid)
+    else:
+        wlan.connect(ssid, password)
     while wlan.isconnected() == False:
        # print(wlan.status(), network.STAT_CONNECTING, network.STAT_CONNECT_FAIL, network.STAT_WRONG_PASSWORD, network.STAT_NO_AP_FOUND)
         print('Waiting for connection...')

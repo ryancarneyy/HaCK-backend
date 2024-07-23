@@ -13,7 +13,7 @@
 - There are some examples for sending and receiving data through the socket which is connected with your node server
 
 
-# Using connections.py
+# Using connections.py for your Pico W
 
 - You will be able to use 2 functions in connections.py
     - One for connection to the MQTT broker (connect_mqtt) and one for connecting to WIFI (connect_internet)
@@ -46,7 +46,8 @@
         - password:
             - this is the password of the wi-fi network you are trying to connect to
 
-- Your Task 
+- Your Task:
 
+    - subscribe to 
 
     

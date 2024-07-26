@@ -1,5 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect, useRef } from "react";
+import io from 'socket.io-client';
+
+const socket = io('http://localhost:8000');
+
 
 function App() {
 
@@ -38,12 +41,10 @@ function App() {
     socket.emit('send-arm-value', value);
   };
 
-  const sendPinchValue = (value) => {
-    socket.emit('send-pinch-value', value);
-  }
   
   return (
     <div className="App">
+      <p>Write your code here!</p>
     </div>
   );
 }

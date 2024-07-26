@@ -24,12 +24,11 @@
 
 
 
-# Setting up your frontend connection to your node server (EXAMPLE CODE)!
+# Setting up your frontend connection to your node server!
 
-- These are just example functions, you will have to fill the contents of the functions yourself.
-- Inside of the frontend directory, there is a file named Connect.js. This is where you connect using a socket to your node server.
-- There are some examples for sending and receiving data through the socket which is connected with your node server
-
+- Run npm start just like normal in order to start your frontend
+- I have given you functions to send and recieve data through mqtt broker. You have to decide how to implement them.
+- When you run npm start, you should see there is a message that pops up in the node server's console, which says frontend has connected to socket. Once you see this message you should be good to go.
 
 # Using connections.py for your Pico W
 

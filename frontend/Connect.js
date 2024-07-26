@@ -7,8 +7,9 @@ const socket = io('http://localhost:8000');
 
   useEffect(() => {
     // Listen for temperature updates
+    // When you receive a message with the topic 'example_topic' through the socket
     socket.on('example_topic', (data) => {
-      setTemp(data);
+      setData(data);
     });
 
     
@@ -18,6 +19,8 @@ const socket = io('http://localhost:8000');
     };
   }, []);
 
+  
   const exampleSend = (message) => {
+    // send a message through the socket
     socket.emit('example_topic', message);
   };

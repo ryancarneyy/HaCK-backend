@@ -1,9 +1,27 @@
 
-# Setting up a working node server - IMPLEMENTATION NOT YET RELEASED
+# Setting up a working node server - IMPLEMENTATION RELEASED
 
-- With this backend (index.js), you will be able to send and recieve messages using MQTT protocol
+- Take the folder backend (containing index.js), and put the folder directly into your project folder which you have made. Your project folder will hold 2/3 folders: 
+    - backend
+    - frontend (containing react project)
+    - pico code (if you choose to contain a copy of your pico code on your actual computer)
+        - to edit pico code directly, use thonny to edit the files that are currently on the pico
+
+- you will be able to send and recieve messages using MQTT protocol, using the node server (index.js) as the middle man between the frontend React site and the MQTT broker
+
+# .env file inside of backend folder
+
 - In order to connect your mqtt, make a file called .env inside of this folder, where your CONNECT_URL, MQTT_USER, and MQTT_PASS will be stored
-<!-- - With these set up, you will be able to run your node server through port 8000, which will subscribe to 2 topics, 'temp' and 'ultrasonic', which you will be able to change if you please. -->
+    - create variables with these names, that contain a string of these
+        - CONNECT_URL: contains a string of the url for the MQTT broker
+        - CONNECT_USER: contains the username of the credential you created for your node server
+        - MQTT_PASS: contains the password of the credential that you created for your node server
+- With these set up, you will be able to run your node server through port 8000, which will subscribe to 2 topics, 'temp' and 'ultrasonic', which you will be able to change if you please.
+    - run the node server by running 
+        "node index.js" in your backend directory which you have taken off of my github
+    - if you see "subscribed to temp" and "subscribed to ultrasonic" you should be good and connected! 
+
+
 
 
 # Setting up your frontend connection to your node server (EXAMPLE CODE)!
@@ -46,8 +64,5 @@
         - password:
             - this is the password of the wi-fi network you are trying to connect to
 
-- Your Task:
-
-    - subscribe to 
 
     

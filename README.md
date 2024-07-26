@@ -8,7 +8,9 @@
      rm -rf .git
 - This will remove the .git folder from your project, so you can now run 
     git init to make a new empty repository inside of the folder!
+
 # Setting up a working node server - IMPLEMENTATION RELEASED
+
 
 - Take the folder backend (containing index.js), and put the folder directly into your project folder which you have made. Your project folder will hold 2/3 folders: 
     - backend
@@ -17,6 +19,7 @@
         - to edit pico code directly, use thonny to edit the files that are currently on the pico
 
 - you will be able to send and recieve messages using MQTT protocol, using the node server (index.js) as the middle man between the frontend React site and the MQTT broker
+- WHEN IN YOUR BACKEND FOLDER: run npm i to install all dependencies
 
 # .env file inside of backend folder
 

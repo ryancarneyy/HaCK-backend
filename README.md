@@ -1,4 +1,13 @@
 
+# STARTING THIS PROJECT - removing the .git folder
+
+- first of all, clone the repo onto your desktop using
+    git clone https://github.com/ryancarneyy/HaCK-backend
+- then, navigate into the repository using cd
+- once you are in the HaCK-backend repository in the terminal, run
+     rm -rf .git
+- This will remove the .git folder from your project, so you can now run 
+    git init to make a new empty repository inside of the folder!
 # Setting up a working node server - IMPLEMENTATION RELEASED
 
 - Take the folder backend (containing index.js), and put the folder directly into your project folder which you have made. Your project folder will hold 2/3 folders: 
@@ -13,7 +22,9 @@
 
 - In order to connect your mqtt, make a file called .env inside of this folder, where your CONNECT_URL, MQTT_USER, and MQTT_PASS will be stored
     - create variables with these names, that contain a string of these
-        - CONNECT_URL: contains a string of the url for the MQTT broker
+        - THESE VARIABLES SHOULD NOT BE STRINGS, JUST PLAIN TEXT
+        - CONNECT_URL: contains a of the url for the MQTT broker
+            - THIS URL SHOULD CONTAIN: mqtts://urlofyourbroker.edu:8883
         - CONNECT_USER: contains the username of the credential you created for your node server
         - MQTT_PASS: contains the password of the credential that you created for your node server
 - With these set up, you will be able to run your node server through port 8000, which will subscribe to 2 topics, 'temp' and 'ultrasonic', which you will be able to change if you please.
